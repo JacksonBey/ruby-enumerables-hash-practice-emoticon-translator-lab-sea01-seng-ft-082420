@@ -12,7 +12,7 @@ return emoticons
 end
 
 
-def get_japanese_emoticon
+def get_japanese_emoticon(string,emote)
 emoticons =load_library(string)
 emoticons.each do |(key,value)|
   value.each do |values|
@@ -24,7 +24,7 @@ end
 return "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning
+def get_english_meaning(string,emote)
 emoticons =load_library(string)
 emoticons.each do |(key,value)|
   value.each do |values|
