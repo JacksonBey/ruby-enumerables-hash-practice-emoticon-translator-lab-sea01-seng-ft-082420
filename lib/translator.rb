@@ -6,15 +6,11 @@ def load_library(string)
 lib = YAML.load_file(string)
 emoticons = {}
 lib.each do |(key,value)|
-  value.each_with_index do |emote,index|
-    if index != 1
-      emoticons[key] +=[{:english=>"#{emote}"}]
-    else
-      emoticons[key] +=[{:japanese=>"#{emote}"}]
-  end
+    emoticons[key]={:english =>"#{value[0]}",:japanese =>"#{value[1]}"}
 end
 return emoticons
 end
+
 
 def get_japanese_emoticon
   # code goes here
