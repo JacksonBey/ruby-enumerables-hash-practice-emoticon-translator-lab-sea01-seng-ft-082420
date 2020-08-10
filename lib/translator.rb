@@ -11,8 +11,6 @@ lib.each do |(key,value)|
       emoticons[key] +=[{:english=>"#{emote}"}]
     else
       emoticons[key] +=[{:japanese=>"#{emote}"}]
-      binding.pry
-    end
   end
 end
 return emoticons
@@ -23,5 +21,13 @@ def get_japanese_emoticon
 end
 
 def get_english_meaning
-  # code goes here
+emoticons =load_library(string)
+emoticons.each do |(key,value)|
+  value.each do |values|
+    if emote === values[1]
+      return key
+end
+end
+end
+return "Sorry, that emoticon was not found"
 end
