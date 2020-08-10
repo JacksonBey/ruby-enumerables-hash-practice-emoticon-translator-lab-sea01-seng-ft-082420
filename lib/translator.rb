@@ -28,8 +28,8 @@ def get_english_meaning(string,emote)
 emoticons =load_library(string)
 emoticons.each do |(key,value)|
   value.each do |values|
-    if emote === values[0]
-      return values[1]
+    if emote === values[1]
+      return key
 end
 end
 end
