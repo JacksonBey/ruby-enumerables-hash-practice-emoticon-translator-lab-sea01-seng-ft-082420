@@ -13,7 +13,15 @@ end
 
 
 def get_japanese_emoticon
-  # code goes here
+emoticons =load_library(string)
+emoticons.each do |(key,value)|
+  value.each do |values|
+    if emote === values[1]
+      return key
+end
+end
+end
+return "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning
