@@ -16,8 +16,9 @@ def get_japanese_emoticon(string,emote)
 emoticons =load_library(string)
 emoticons.each do |(key,value)|
   value.each do |values|
+    binding.pry
     if emote === values[1]
-      return values[0]
+      return sdf
 end
 end
 end
