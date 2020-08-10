@@ -29,7 +29,7 @@ emoticons =load_library(string)
 emoticons.each do |(key,value)|
   value.each do |values|
     if emote === values[1]
-      return key
+      return 
 end
 end
 end
